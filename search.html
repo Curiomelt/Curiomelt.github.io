@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search | CurioMelt</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="new_favicon_curiomelt.png">
+  <!-- Remix icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- Swiper.js styles -->
+  <link rel="stylesheet" href="swiper-bundle.min.css"/>
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="search.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+
+      <nav class="navbar container">
+          <a href="./index.html">
+              <h2 class="logo">Curio<span class="logo_melt">Melt</span></h2>
+          </a>
+
+          <div class="menu" id="menu">
+              <ul class="list">
+                  <li class="list-item">
+                      <a href="index.html" class="list-link current">Home</a>
+                  </li>
+                  <li class="list-item">
+                      <a href="categories.html" class="list-link">Categories</a>
+                  </li>
+                  <li class="list-item">
+                      <a href="about_us.html" class="list-link">About us</a>
+                  </li>
+                  <li class="list-item">
+                      <a href="#" class="list-link">Newsletter</a>
+                  </li>
+             
+    
+                  <li class="list-item">
+                      <a class="list-link" href= mailto:curiomelt@gmail.com? subject="HTML link">Contact</a>
+                  </li>
+             
+              </ul>
+          </div>
+
+          <div class="list list-right">
+
+
+              <button class="btn place-items-center" id="theme-toggle-btn">
+                  <!--
+                  <i class="ri-sun-line sun-icon"></i>
+                  <i class="ri-moon-line moon-icon"></i>
+                  -->
+              </button>
+
+        
+
+       <a href="search.html">
+              <button class="btn place-items-center" id="search-icon">
+                  <i class="ri-search-line"></i>
+              </button>
+
+              </a>
+
+              <button class="btn place-items-center screen-lg-hidden menu-toggle-icon" id="menu-toggle-icon">
+                  <i class="ri-menu-3-line open-menu-icon"></i>
+                  <i class="ri-close-line close-menu-icon"></i>
+              </button>
+
+              <a href="#" class="btn sign-up-btn fancy-border screen-sm-hidden">
+                  <span>Search</span>
+              </a>
+          </div>
+
+      </nav>
+
+  </header>
+
+
+
+
+
+
+
+<style>
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+}
+
+#search-input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+.button_search {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #575757;
+  color: #fff;
+  cursor: pointer;
+}
+
+.button_search:hover {
+  background-color: #363636;
+}
+
+
+
+
+
+/*the articles*/
+
+.featured-articles-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 30px;
+}
+
+.featured-article {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  width: 50%;
+}
+
+.featured-article:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.article-image {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.article-category {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #13136098;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 60%;
+}
+
+
+.article-data-container {
+  padding: 20px;
+}
+
+.article-data {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.article-data-spacer {
+  width: .5rem;
+    height: .5rem;
+    background-color: var(--light-color-alt);
+    transform: rotate(45deg);
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #dce3ff;
+}
+
+.article-title {
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.article-title:hover{
+transition: 0.3s;
+
+}
+
+@media screen and (max-width: 768px) {
+  .featured-articles-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+</style>
+
+
+
+<div class="search-container">
+  <input type="text" placeholder="Search..." id="search-input">
+  <button class="button_search" type="button" onclick="searchArticles()">Search</button>
+</div>
+
+
+<section class="featured-articles section section-header-offset">
+  <div class="featured-articles-container container d-grid" id="articles-container">
+    <!-- Articles will be dynamically added here -->
+  </div>
+</section>
+
+
+   <!-- Search -->
+   <div class="search-form-container container" id="search-form-container">
+
+    <div class="form-container-inner">
+
+    </div>
+
+    <button class="btn form-close-btn place-items-center" id="form-close-btn">
+        <i class="ri-close-line"></i>
+    </button>
+
+</div>
+
+
+
+  <script>
+  var articles = [  {    href: "most_beautiful_places.html",    imageSrc: "petra.jpeg",    category: "Travel",    date: "2 Apr 2023",    readTime: "3 Min read",    title: "Top 10 Most Beautiful Places to Travel Around The World"  },   {    href: "why_travel_india.html",    imageSrc: "indian_people.jpeg",    category: "Travel",    date: "3 Apr 2023",    readTime: "4 Min read",    title: "5 reasons for why you should travel to India"  },  
+  {    href: "tips_travel_budget.html",    imageSrc: "travel_budget.jpg",    category: "Travel",    date: "4 Apr 2023",    readTime: "5 Min read",    title: "Tips and Tricks for an Amazing Budget Travel Experience"  },     {    href: "famous_celeb_contry.html",    imageSrc: "random_celebrity.jpg",    category: "Travel",    date: "6 Apr 2023",    readTime: "3 Min read",    title: "Top 5 Countries That Famous Celebrities Love to Visit"  },      {    href: "negative_plane.html",    imageSrc: "plane.webp",    category: "Travel",    date: "7 Apr 2023",    readTime: "4 Min read",    title: "Why You Should Travel Less Often By Plane"  },
+
+  {    href: "brazil_great_food.html",    imageSrc: "Coxinha.jpg",    category: "Food",    date: "6 Apr 2023",    readTime: "6 Min read",    title: "Top 6 Foods You Just Got to Try From Brazil"  },   {    href: "usa_food_insecurity.html",    imageSrc: "food_insecurity.jpg",    category: "Food",    date: "8 Apr 2023",    readTime: "7 Min read",    title: "Why the United States May Encounter Food Insecurity in the Future"  },     {    href: "Australia_food_waste.html",    imageSrc: "food_waste.jfif",    category: "Food",    date: "13 Apr 2023",    readTime: "6 Min read",    title: "Why Australia Wastes a Shocking Amount of Food"  },
+
+  {    href: "beware_2023_tech.html",    imageSrc: "AI_photo.jpg",    category: "Technology",    date: "23 Feb 2023",    readTime: "4 Min read",    title: "Technologies to Watch Out for in 2023"  },     {    href: "repair_old.html",    imageSrc: "e_waste.jpg",    category: "Technology",    date: "18 Mar 2023",    readTime: "5 Min read",    title: "Why Repairing Old Tech Devices is Better than Buying New"  },     {    href: "reasons_pixel_seven.html",    imageSrc: "google_pixel.jpg",    category: "Technology",    date: "23 Mar 2023",    readTime: "2 Min read",    title: "Top 5 Reasons to Buy the Google Pixel 7"  },
+
+  {    href: "sitting_is_smoking.html",    imageSrc: "obese_man.jpg",    category: "Health",    date: "9 Apr 2023",    readTime: "4 Min read",    title: "Why Sitting is the New Smoking: Tips to Stay Active at Work and Home"  },    {    href: "lemon_water.html",    imageSrc: "lemon_water.jpg",    category: "Health",    date: "10 Apr 2023",    readTime: "3 Min read",    title: "6 Surprising Health Benefits From Drinking Lemon Water"  },     {    href: "obese_america.html",    imageSrc: "obese_american.jpg",    category: "Health",    date: "14 Apr 2023",    readTime: "5 Min read",    title: "The High Obesity Rate in America and Its Impact on Public Health"  }, 
+
+  {    href: "best_netflix_documentary.html",    imageSrc: "netflix_streaming.jpg",    category: "Entertainment",    date: "19 Apr 2023",    readTime: "4 Min read",    title: "Some of The Best Netflix Documentaries Ever Made"  },    {    href: "john_wick_five.html",    imageSrc: "jhon_wick_world.jpg",    category: "Entertainment",    date: "4 Apr 2023",    readTime: "6 Min read",    title: "What's Next for John Wick? Exploring the Possibility of John Wick 5"  },     {    href: "best_streaming_service.html",    imageSrc: "binge_watch_comic.jpg",    category: "Entertainment",    date: "17 Apr 2023",    readTime: "5 Min read",    title: "Top 10 Best Streaming Services for Your Binge-Watching Needs"  }, 
+
+  {    href: "best_animes.html",    imageSrc: "demon_slayer.png",    category: "Nerdy",    date: "19 Mar 2023",    readTime: "4 Min read",    title: "The Top 10 Best Anime Series to Watch in 2023"  },     {    href: "best_anime_soundtrack.html",    imageSrc: "Neon Genesis Evangelion world, anime art.jpg",    category: "Nerdy",    date: "2 May 2023",    readTime: "6 Min read",    title: "Top 10 Best Soundtracks From Popular Anime Series"  },       {    href: "evolution_games.html",    imageSrc: "retro_gaming.jpeg",    category: "Nerdy",    date: "4 May 2023",    readTime: "5 Min read",    title: "The Evolution of Video Games"  },     
+  
+
+  {    href: "dessertification.html",    imageSrc: "Desertification_negative.jpeg",    category: "Environment",    date: "5 May 2023",    readTime: "6 Min read",    title: "Desertification: The Environmental Problem We Can't Afford to Ignore"  },      {    href: "environmental_practices.html",    imageSrc: "tree_planting.jpg",    category: "Environment",    date: "8 May 2023",    readTime: "3 Min read",    title: "10 Effective Environmental Practices to Save Our Earth: A Comprehensive Guide"  },        {    href: "green_india.html",    imageSrc: "solar_india.jpeg",    category: "Environment",    date: "9 May 2023",    readTime: "4 Min read",    title: "India's Remarkable Efforts in Tackling Climate Change"  },
+
+
+  {    href: "crypto.html",    imageSrc: "bitcoin(4).jpeg",    category: "Business",    date: "9 May 2023",    readTime: "5 Min read",    title: "Top 5 Cryptocurrencies to Invest in 2023"  },   {    href: "save_money.html",    imageSrc: "better_budget.webp",    category: "Business",    date: "10 May 2023",    readTime: "3 Min read",    title: "Reasons Why Starting to Save Money Young is Essential for Your Business Success"  },     {    href: "copyright_issue.html",    imageSrc: "roality_images.jpg",    category: "Business",    date: "11 May 2023",    readTime: "3 Min read",    title: "5 Essential Tips to Avoid Copyright and Trademark Issues for Your Business"  }, 
+
+];
+
+function searchArticles() {
+  var input = document.getElementById("search-input").value.toLowerCase();
+  var matchingArticles = articles.filter(function(article) {
+    var title = article.title.toLowerCase();
+    var category = article.category.toLowerCase();
+    return title.includes(input) || category.includes(input);
+  });
+  
+  if (matchingArticles.length === 0) {
+    document.getElementById("articles-container").innerHTML = "<p>No articles found.</p>";
+    return;
+  }
+  
+  var articlesHtml = matchingArticles.map(function(article) {
+    return `
+      <a href="${article.href}" class="article featured-articles">
+        <img src="${article.imageSrc}" alt="" class="article-image">
+        <span class="article-category">${article.category}</span>
+        <div class="article-data-container">
+          <div class="article-data">
+            <span>${article.date}</span>
+            <span class="article-data-spacer"></span>
+            <span>${article.readTime}</span>
+          </div>
+          <h3 class="title article-title">${article.title}</h3>
+        </div>
+      </a>
+    `;
+  }).join("");
+  
+  document.getElementById("articles-container").innerHTML = articlesHtml;
+}
+
+  </script>
+
+
+
+
+
+
+    <!-- Swiper.js -->
+    <!-- Custom script -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+
+
