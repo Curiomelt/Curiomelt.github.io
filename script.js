@@ -1,4 +1,10 @@
 
+
+var url = window.location.pathname;
+url = url.split('.html')[0];
+window.history.replaceState( null, null, url );
+
+
 // Grab elements
 const selectElement = (selector) => {
     const element = document.querySelector(selector);
