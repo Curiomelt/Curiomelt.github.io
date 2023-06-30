@@ -1,10 +1,8 @@
 
-function removeHTMLExtension(url) {
-  return url.replace(/\.html$/, "");
-}
+var url = window.location.origin;
+url = url.split('.html')[0];
+window.history.replaceState( null, null, url );
 
-
-var newUrl = removeHTMLExtension(url);
 
 
 
