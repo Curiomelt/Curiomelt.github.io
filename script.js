@@ -4,6 +4,10 @@ function removeHTMLExtension(url) {
 }
 
 
+var newUrl = removeHTMLExtension(url);
+
+
+
 // Grab elements
 const selectElement = (selector) => {
     const element = document.querySelector(selector);
