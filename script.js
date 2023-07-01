@@ -1,8 +1,15 @@
 
+function removeHtmlExtension(url) {
+  return url.replace(/\.html$/, '');
+}
 
-var url = window.location.pathname;
-url = url.split('.html')[0];
-window.history.replaceState( null, null, url );
+
+window.addEventListener('load', function() {
+  var url = window.location.pathname;
+  url = removeHtmlExtension(url);
+  window.history.replaceState(null, null, url);
+});
+
 
 
 // Grab elements
