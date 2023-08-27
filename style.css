@@ -55,6 +55,12 @@ ul{
     list-style: none;
 }
 
+  ul, ol {
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
 img{
     max-width: 100%;
 }
