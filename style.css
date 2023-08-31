@@ -962,5 +962,32 @@ body.light-theme{
 }
 
 
+.border-box {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+    .border-box {
+        max-width: 90%;
+    }
+}
+
+
+.border-box-text {
+    transition: 0.3s;
+    color: #e09949;
+    font-size: 17px;
+    font-weight: 510;
+}
+
+.border-box-text:hover{
+    color: var(--light-color);
+    transition: 0.4s;
+}
 
 
