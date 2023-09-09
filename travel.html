@@ -10,21 +10,8 @@
     <!-- Remix icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <!-- Swiper.js styles -->
-    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css"/>
     <!-- Custom styles -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0RFY7NXJ8C"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-0RFY7NXJ8C');
-</script>
-
-    
 </head>
 <body>
     
@@ -100,7 +87,25 @@
 
 
     <!-- Search -->
+    <div class="search-form-container container" id="search-form-container">
 
+        <div class="form-container-inner">
+
+            <form class="form" id="search-form" action="search-results.html">
+                <input class="form-input" type="search" id="search-input" name="query" placeholder="Search articles...">
+                <button class="btn form-btn" type="submit">
+                    <i class="ri-search-line"></i>
+                </button>
+            </form>
+            <span class="form-note">Or press ESC to close.</span>
+
+        </div>
+
+        <button class="btn form-close-btn place-items-center" id="form-close-btn">
+            <i class="ri-close-line"></i>
+        </button>
+
+    </div>
 
     <!-- Featured articles -->
 
@@ -166,7 +171,7 @@
 
                 <a href="tips_travel_budget.html" class="article d-grid">
                     <div class="older-posts-article-image-wrapper">
-                        <img src="travel_budget.jpg" alt="" class="article-image">
+                        <img src="plane_and_money.jpg" alt="A plane flying over a jar full of money" class="article-image">
                     </div>
 
                     <div class="article-data-container">
@@ -174,10 +179,10 @@
                         <div class="article-data">
                             <span>4 Apr 2023</span>
                             <span class="article-data-spacer"></span>
-                            <span>5 Min read</span>
+                            <span>4 Min read</span>
                         </div>
 
-                        <h3 class="title article-title">Tips and Tricks for an Amazing Budget Travel Experience</h3>
+                        <h3 class="title article-title">How to Travel on a Budget: Tips for Beginner Travelers</h3>
 
                     </div>
                 </a>
@@ -360,7 +365,6 @@
 
 
     <!-- Swiper.js -->
-    <script src="./assets/js/swiper-bundle.min.js"></script>
     <!-- Custom script -->
     <script src="script.js"></script>
 </body>
