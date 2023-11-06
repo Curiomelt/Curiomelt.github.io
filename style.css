@@ -281,6 +281,9 @@ body.light-theme{
 }
 
 /* Form JavaScript styles */
+.search-form-container.activated{
+    opacity: 1;
+    transform: scale(1);
 
 
 /* Featured articles */
