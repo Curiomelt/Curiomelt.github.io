@@ -284,6 +284,7 @@ body.light-theme{
 .search-form-container.activated{
     opacity: 1;
     transform: scale(1);
+}
 
 
 /* Featured articles */
