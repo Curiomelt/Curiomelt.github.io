@@ -1,6 +1,2 @@
 User-agent: *
-Disallow: /newsletter.html
-Disallow: /about_us.html
-Disallow: /cookies.html
-Disallow: /privacy_policy.html
 Disallow: /search.html
