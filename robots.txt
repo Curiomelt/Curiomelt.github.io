@@ -4,6 +4,3 @@ Disallow: /about_us.html
 Disallow: /cookies.html
 Disallow: /privacy_policy.html
 Disallow: /search.html
-Disallow: /css/
-Disallow: /js/
-Disallow: /php/
