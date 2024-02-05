@@ -102,3 +102,11 @@ const swiper = new Swiper(".swiper", {
         }
     }   
 });
+
+
+
+
+
+ExpiresByType text/javascript "access plus 12 month"
+ExpiresByType application/x-javascript "access plus 12 month"
+ExpiresByType application/javascript "access plus 12 month"
