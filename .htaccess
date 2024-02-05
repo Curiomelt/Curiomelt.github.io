@@ -1,4 +1,12 @@
-<FilesMatch "(?i)^.*\.(ico|flv|jpg|jpeg|png|gif|js|css|woff)$">
+# Enable Expires Headers
 ExpiresActive On
-ExpiresDefault A2592000
-</FilesMatch>
+
+# Set default expiration for all files to 1 month (you can adjust this as needed)
+ExpiresDefault "access plus 1 month"
+
+# Set expiration for specific file types
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+ExpiresByType text/html "access plus 1 day"
