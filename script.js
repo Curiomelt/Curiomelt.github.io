@@ -85,3 +85,8 @@ const swiper = new Swiper(".swiper", {
         }
     }   
 });
+
+
+
+// Example setting cache-control header to cache for 1 hour
+response.setHeader('Cache-Control', 'max-age=3600');
