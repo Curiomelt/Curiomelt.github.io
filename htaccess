@@ -1,4 +1,12 @@
-<FilesMatch "(?i)^.*\.(ico|flv|jpg|jpeg|png|gif|js|css|woff)$">
+<ifmodule mod_expires.c>
 ExpiresActive On
-ExpiresDefault A2592000
-</FilesMatch>
+ExpiresByType text/css "access plus 1 day"
+ExpiresDefault "access plus 0 days"
+</ifmodule>
+<ifModule mod_headers.c>
+
+# 1 DAYS for
+< filesMatch ". (css|png|gif)$">
+Header set Cache-Control "max-age=86408, public, must-revalidate"
+</filesMatch>
+</ifModule>
