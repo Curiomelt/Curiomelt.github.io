@@ -361,6 +361,7 @@ body.light-theme{
     gap: var(--gap);
     font-size: var(--font-size-xsm);
     margin-bottom: 1rem;
+    transition: 0.4s
 }
 
 .article-data-spacer{
