@@ -352,6 +352,7 @@ body.light-theme{
 
 .article:hover .article-title{
     color: var(--hover-light-color);
+    transition: 0.4s;
 }
 
 
@@ -377,6 +378,7 @@ body.light-theme{
 
 .article-title{
     font-size: var(--font-size-md);
+    transition: 0.4s;
 }
 
 /* Sidebar */
