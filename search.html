@@ -91,19 +91,12 @@
 
   </header>
 
-
-
-
-
-
-
 <style>
-
 .search-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 120px;
+  margin-top: 20px; /* Adjust margin as needed */
 }
 
 #search-input {
@@ -111,6 +104,7 @@
   border-radius: 5px;
   border: 1px solid #ccc;
   margin-right: 10px;
+  width: 70%; /* Adjust width for smaller screens */
 }
 
 .button_search {
@@ -126,101 +120,19 @@
   background-color: #363636;
 }
 
-
-
-
-
-/*the articles*/
-
-.featured-articles-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 30px;
-}
-
-.featured-article {
-  position: relative;
-  overflow: hidden;
-  display: block;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
-  text-decoration: none;
-  width: 50%;
-}
-
-.featured-article:hover {
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-  transform: translateY(-5px);
-}
-
-.article-image {
-  display: block;
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.article-category {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  font-size: 14px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #fff;
-  background-color: #13136098;
-  padding: 5px 10px;
-  border-radius: 5px;
-  width: 60%;
-}
-
-
-.article-data-container {
-  padding: 20px;
-}
-
-.article-data {
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 10px;
-}
-
-.article-data-spacer {
-  width: .5rem;
-    height: .5rem;
-    background-color: var(--light-color-alt);
-    transform: rotate(45deg);
-}
-
-.title {
-  margin-top: 0;
-  margin-bottom: 15px;
-  font-size: 24px;
-  color: #dce3ff;
-}
-
-.article-title {
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.article-title:hover{
-transition: 0.3s;
-
-}
-
 @media screen and (max-width: 768px) {
-  .featured-articles-container {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  .search-container {
+    flex-direction: column;
+    margin-top: 30px; /* Adjust margin as needed */
+  }
+
+  #search-input {
+    width: 100%; /* Take full width on smaller screens */
+    margin-right: 0; /* Remove margin */
+    margin-bottom: 10px; /* Add some bottom margin */
   }
 }
 </style>
-
-
 
 <div class="search-container">
   <input type="text" placeholder="Search..." id="search-input">
@@ -305,13 +217,7 @@ function searchArticles() {
   
   document.getElementById("articles-container").innerHTML = articlesHtml;
 }
-
   </script>
-
-
-
-
-
 
     <!-- Swiper.js -->
     <!-- Custom script -->
@@ -319,6 +225,3 @@ function searchArticles() {
 
 </body>
 </html>
-
-
-
