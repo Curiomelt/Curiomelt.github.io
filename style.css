@@ -780,11 +780,6 @@ body.light-theme{
     /* Fancy button animation effect */
 
 
-    @keyframes animate_border{
-        to{
-            transform:translateX(-50%)
-        }
-    }
 
     .featured-articles-container{
         grid-template-columns: 1fr 40rem;
