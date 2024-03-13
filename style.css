@@ -261,7 +261,7 @@ body.light-theme{
 }
 
 
-
+/*Boy boy*/
 
 
 
@@ -778,9 +778,7 @@ body.light-theme{
     }
 
     /* Fancy button animation effect */
-    .btn.fancy-border:hover::before{
-        animation: animate_border .75s linear infinite
-    }
+
 
     @keyframes animate_border{
         to{
