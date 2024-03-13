@@ -260,8 +260,44 @@ body.light-theme{
     height: inherit;
 }
 
+.fancy-border{
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(123, 255, 127);
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
 
-/*Boy boy*/
+@keyframes example {
+    10%   {background-color: rgb(49, 190, 191);}
+    20%  {background-color: rgb(242, 58, 112);}
+    30%  {background-color: rgb(131, 248, 161);}
+    40% {background-color: rgb(7, 96, 168);}
+
+  }
+
+.fancy-border::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    animation-name: example;
+    background-size: 50% 100%;
+    z-index: 5;
+}
+
+.fancy-border span{
+    position: relative;
+    z-index: 10;
+    display: inline-flex;
+    background-color: var(--secondary-background-color);
+    animation-name: example;
+    padding: .6rem 1.5rem;
+}
+
 
 
 
@@ -778,8 +814,15 @@ body.light-theme{
     }
 
     /* Fancy button animation effect */
+    .btn.fancy-border:hover::before{
+        animation: animate_border .75s linear infinite
+    }
 
-
+    @keyframes animate_border{
+        to{
+            transform:translateX(-50%)
+        }
+    }
 
     .featured-articles-container{
         grid-template-columns: 1fr 40rem;
@@ -890,3 +933,13 @@ body.light-theme{
 }
 
 
+.btn.sign-up-btn.fancy-border.screen-sm-hidden {
+    border: none; /* Remove border */
+    background-color: transparent; /* Remove background color */
+    animation: none; /* Remove animation */
+}
+
+.btn.sign-up-btn.fancy-border.screen-sm-hidden span {
+    background-color: transparent; /* Remove background color for the span inside */
+    color: inherit; /* Inherit text color */
+}
