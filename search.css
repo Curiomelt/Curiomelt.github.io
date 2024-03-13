@@ -311,30 +311,7 @@ body.light-theme{
     height: inherit;
 }
 
-.fancy-border{
-    position: relative;
-    overflow: hidden;
-}
 
-.fancy-border::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 100%;
-    background: var(--gradient-color);
-    background-size: 50% 100%;
-    z-index: 5;
-}
-
-.fancy-border span{
-    position: relative;
-    z-index: 10;
-    display: inline-flex;
-    background-color: var(--secondary-background-color);
-    padding: .6rem 1.5rem;
-}
 
 .article{
     position: relative;
