@@ -260,43 +260,7 @@ body.light-theme{
     height: inherit;
 }
 
-.fancy-border{
-    position: relative;
-    overflow: hidden;
-    background-color: rgb(123, 255, 127);
-    animation-name: example;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-}
 
-@keyframes example {
-    10%   {background-color: rgb(49, 190, 191);}
-    20%  {background-color: rgb(242, 58, 112);}
-    30%  {background-color: rgb(131, 248, 161);}
-    40% {background-color: rgb(7, 96, 168);}
-
-  }
-
-.fancy-border::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 100%;
-    animation-name: example;
-    background-size: 50% 100%;
-    z-index: 5;
-}
-
-.fancy-border span{
-    position: relative;
-    z-index: 10;
-    display: inline-flex;
-    background-color: var(--secondary-background-color);
-    animation-name: example;
-    padding: .6rem 1.5rem;
-}
 
 
 
