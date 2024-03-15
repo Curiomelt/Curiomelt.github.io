@@ -3,10 +3,10 @@
 
 /* Custom properties */
 :root{
-    --light-color: #fff;
-    --light-color-alt: #afb6cd;
-    --primary-background-color: #131417;
-    --secondary-background-color: #252830;
+    --light-color: #8c8c8c;
+    --light-color-alt: #5d5d5d;
+    --primary-background-color: #ffffff;
+    --secondary-background-color: #b5b5b5;
     --hover-light-color: var(--light-color);
     --hover-dark-color: var(--primary-background-color);
     --gradient-color: linear-gradient(
@@ -601,7 +601,9 @@ body.light-theme{
 
 .blog-post-title{
     font-size: clamp(3rem, 5vw, 6rem); 
+    color:#000
 }
+
 
 .blog-post-data .article-data{
     margin-bottom: 2.5rem;
