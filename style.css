@@ -306,7 +306,7 @@ body.light-theme{
 
 /* Light theme color hover styles */
 .article:hover .article-data-container{
-    background-color: var(--hover-dark-color);
+    background-color: #f5f5dc;
     color: var(--hover-light-color);
 }
 
