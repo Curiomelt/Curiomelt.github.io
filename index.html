@@ -209,7 +209,18 @@
     </section>
 
 
-
+    <script>
+        document.querySelectorAll('.article').forEach(function(article) {
+            article.addEventListener('mouseover', function() {
+                article.style.transform = 'scale(1.05)';
+                article.style.background = article.style.background.replace('rgba(0, 0, 0, 0.6)', 'rgba(0, 0, 0, 0.3)');
+            });
+            article.addEventListener('mouseout', function() {
+                article.style.transform = 'scale(1)';
+                article.style.background = article.style.background.replace('rgba(0, 0, 0, 0.3)', 'rgba(0, 0, 0, 0.6)');
+            });
+        });
+    </script>
 
 
 
