@@ -179,6 +179,76 @@
             </div>
          </div>
       </section>
+
+
+
+
+
+<!--Categories-->
+         <style>
+   
+   
+    
+        .article {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 200px;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+        .article:hover {
+            transform: scale(1.05);
+        }
+        .article::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
+            transition: background 0.3s ease-in-out;
+        }
+        .article:hover::after {
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+        }
+    
+    </style>
+
+    <section class="popular-tags section">
+        <div class="container">
+            <h1 class="title section-title">Categories</h1>
+            <div class="popular-tags-container d-grid">
+                <a href="food.html" class="article" style="background: url('pasta-food-cover.jpg') no-repeat center; background-size: cover;">
+                    <span class="tag-name">Food</span>
+                </a>
+                <a href="tech.html" class="article" style="background: url('technology-categories-cover.jpg') no-repeat center; background-size: cover;">
+                    <span class="tag-name">Technology</span>
+                </a>
+                <a href="health.html" class="article" style="background: url('health-cover-hands.jpg') no-repeat center; background-size: cover;">
+                    <span class="tag-name">Health</span>
+                </a>
+                <a href="entertainment.html" class="article" style="background: url('entertainment_thumbnail.webp') no-repeat center; background-size: cover;">
+                    <span class="tag-name">Entertainment</span>
+                </a>
+                <a href="environment.html" class="article" style="background: url('top-trees-cover-environment.jpg') no-repeat center; background-size: cover;">
+                    <span class="tag-name">Environment</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+      
+
+
+      
       <footer class="footer section">
          <div class="footer-container container d-grid">
             <div class="company-data">
