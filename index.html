@@ -185,62 +185,41 @@
 
 
 <!--Categories-->
-         <style>
-   
-   
-    
-        .article {
-            position: relative;
-            display: block;
-            width: 100%;
-            height: 200px;
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s ease-in-out;
-        }
-        .article:hover {
-            transform: scale(1.05);
-        }
-        .article::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
-            transition: background 0.3s ease-in-out;
-        }
-        .article:hover::after {
-            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
-        }
-    
-    </style>
-
-    <section class="popular-tags section">
-        <div class="container">
-            <h1 class="title section-title">Categories</h1>
-            <div class="popular-tags-container d-grid">
-                <a href="food.html" class="article" style="background: url('pasta-food-cover.jpg') no-repeat center; background-size: cover;">
-                    <span class="tag-name">Food</span>
+     <section class="popular-tags section" style="padding: 50px 0;">
+        <div class="container" style="width: 80%; margin: auto; overflow: hidden;">
+            <h1 class="title section-title" style="text-align: center; margin-bottom: 30px; font-size: 2.5em; color: #333;">Categories</h1>
+            <div class="popular-tags-container d-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                <a href="food.html" class="article" style="position: relative; display: block; width: 100%; height: 200px; color: white; text-decoration: none; border-radius: 10px; overflow: hidden; transition: transform 0.3s ease-in-out; background: url('pasta-food-cover.jpg') no-repeat center; background-size: cover;">
+                    <span class="tag-name" style="position: absolute; bottom: 20px; left: 20px; font-size: 1.5em; z-index: 1;">Food</span>
                 </a>
-                <a href="tech.html" class="article" style="background: url('technology-categories-cover.jpg') no-repeat center; background-size: cover;">
-                    <span class="tag-name">Technology</span>
+                <a href="tech.html" class="article" style="position: relative; display: block; width: 100%; height: 200px; color: white; text-decoration: none; border-radius: 10px; overflow: hidden; transition: transform 0.3s ease-in-out; background: url('technology-categories-cover.jpg') no-repeat center; background-size: cover;">
+                    <span class="tag-name" style="position: absolute; bottom: 20px; left: 20px; font-size: 1.5em; z-index: 1;">Technology</span>
                 </a>
-                <a href="health.html" class="article" style="background: url('health-cover-hands.jpg') no-repeat center; background-size: cover;">
-                    <span class="tag-name">Health</span>
+                <a href="health.html" class="article" style="position: relative; display: block; width: 100%; height: 200px; color: white; text-decoration: none; border-radius: 10px; overflow: hidden; transition: transform 0.3s ease-in-out; background: url('health-cover-hands.jpg') no-repeat center; background-size: cover;">
+                    <span class="tag-name" style="position: absolute; bottom: 20px; left: 20px; font-size: 1.5em; z-index: 1;">Health</span>
                 </a>
-                <a href="entertainment.html" class="article" style="background: url('entertainment_thumbnail.webp') no-repeat center; background-size: cover;">
-                    <span class="tag-name">Entertainment</span>
+                <a href="entertainment.html" class="article" style="position: relative; display: block; width: 100%; height: 200px; color: white; text-decoration: none; border-radius: 10px; overflow: hidden; transition: transform 0.3s ease-in-out; background: url('entertainment_thumbnail.webp') no-repeat center; background-size: cover;">
+                    <span class="tag-name" style="position: absolute; bottom: 20px; left: 20px; font-size: 1.5em; z-index: 1;">Entertainment</span>
                 </a>
-                <a href="environment.html" class="article" style="background: url('top-trees-cover-environment.jpg') no-repeat center; background-size: cover;">
-                    <span class="tag-name">Environment</span>
+                <a href="environment.html" class="article" style="position: relative; display: block; width: 100%; height: 200px; color: white; text-decoration: none; border-radius: 10px; overflow: hidden; transition: transform 0.3s ease-in-out; background: url('top-trees-cover-environment.jpg') no-repeat center; background-size: cover;">
+                    <span class="tag-name" style="position: absolute; bottom: 20px; left: 20px; font-size: 1.5em; z-index: 1;">Environment</span>
                 </a>
             </div>
         </div>
     </section>
+
+    <script>
+        document.querySelectorAll('.article').forEach(function(article) {
+            article.addEventListener('mouseover', function() {
+                article.style.transform = 'scale(1.05)';
+                article.style.background = article.style.background.replace('rgba(0, 0, 0, 0.6)', 'rgba(0, 0, 0, 0.3)');
+            });
+            article.addEventListener('mouseout', function() {
+                article.style.transform = 'scale(1)';
+                article.style.background = article.style.background.replace('rgba(0, 0, 0, 0.3)', 'rgba(0, 0, 0, 0.6)');
+            });
+        });
+    </script>
 
 
 
