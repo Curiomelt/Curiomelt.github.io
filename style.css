@@ -3,8 +3,8 @@
 
 /* Custom properties */
 :root{
-    --light-color: #8c8c8c;
-    --light-color-alt: #5d5d5d;
+    --light-color: #fff;
+    --light-color-alt: #afb6cd;
     --primary-background-color: #FFFFF0;
     --secondary-background-color: #9AC7FF;
     --hover-light-color: var(--light-color);
@@ -129,7 +129,7 @@ body.light-theme{
 
 .logo{
     font-size: 26px;
-    color: #FFFFF0;
+    color: var(--light-color);
 }
 
 .logo_melt{
