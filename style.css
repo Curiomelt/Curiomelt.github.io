@@ -5,7 +5,7 @@
 :root{
     --light-color: #8c8c8c;
     --light-color-alt: #5d5d5d;
-    --primary-background-color: #ffffff;
+    --primary-background-color: #FFFFF0;
     --secondary-background-color: #b5b5b5;
     --hover-light-color: var(--light-color);
     --hover-dark-color: var(--primary-background-color);
