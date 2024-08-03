@@ -279,6 +279,9 @@ body.light-theme{
     height: 100%;
     object-fit: cover;
     transition: transform .25s;
+    -moz-border-radius-bottomleft: 10px;
+    -webkit-border-bottom-left-radius: 10px; 
+    -webkit-border-top-left-radius: 10px;
 }
 
 
