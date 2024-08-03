@@ -271,7 +271,6 @@ body.light-theme{
 .article{
     position: relative;
     min-height: var(--item-min-height-md);
-    border-radius: 5px;
 }
 
 .article-image{
