@@ -590,6 +590,7 @@ body.light-theme{
 /* Blog post */
 .blog-post{
     padding-bottom: 5rem;
+    color: #000;
 }
 
 .blog-post-data{
