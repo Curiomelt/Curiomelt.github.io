@@ -105,6 +105,7 @@ body.light-theme{
 
 .d-grid{
     display: grid;
+    border-radius: 10px;
 }
 
 .screen-sm-hidden{
@@ -306,12 +307,18 @@ body.light-theme{
     background-color: var(--transparent-dark-color);
     z-index: 10;
     transition: background-color .5s;
+    -moz-border-radius-bottomleft: 10px;
+    -webkit-border-bottom-right-radius: 10px; 
+    -webkit-border-top-right-radius: 10px;
 }
 
 /* Light theme color hover styles */
 .article:hover .article-data-container{
     background-color: #FFBE82;
     color: var(--hover-light-color);
+    -moz-border-radius-bottomleft: 10px;
+    -webkit-border-bottom-right-radius: 10px; 
+    -webkit-border-top-right-radius: 10px;
 }
 
 .article:hover .article-data-spacer{
