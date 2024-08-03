@@ -180,8 +180,8 @@ body.light-theme{
 .list-link:hover,
 .btn:hover,
 .btn:hover span{
-    color: var(--light-color);
-    transition: 0.6s;
+    color: rgb(255, 149, 68);
+    transition: 0.5s;
 }
 
 .moon-icon{
