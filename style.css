@@ -457,6 +457,9 @@ body.light-theme{
 .older-posts-article-image-wrapper,
 .older-posts .article{
     min-height: var(--item-min-height-sm);
+    -moz-border-radius-bottomleft: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -webkit-border-top-left-radius: 10px;
 }
 
 .older-posts .article{
