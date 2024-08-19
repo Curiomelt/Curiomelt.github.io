@@ -908,7 +908,7 @@ body.light-theme{
 }
 
 .border-box-text:hover{
-    color: var(--light-color);
+    color: #000;
     transition: 0.4s;
 }
 
